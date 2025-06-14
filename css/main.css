@@ -61,7 +61,7 @@ footer .copyright {
 }
 
 .header {
-  background-color: #4CAF50;
+  background-color: #219227;
   color: white;
   padding: 1rem 0 0.5rem;
   text-align: center;
@@ -111,7 +111,7 @@ footer .copyright {
 
 .key {
   font-size: 1.5rem;
-  background: #f0f0f0;
+  background: #219227;
   border: 1px solid #ccc;
   border-radius: 8px;
   color: green;
@@ -127,7 +127,7 @@ footer .copyright {
 }
 
 .footer {
-  background: #4CAF50;
+  background: #219227;
   display: flex;
   justify-content: space-around;
   padding: 0.5rem 0;
