@@ -40,6 +40,9 @@ body {
 .language-text {
   font-size: 1.2rem;
   font-weight: bold;
+  background: linear-gradient(90deg, #89BC2F 0%, #5DA922 40%, #257C13 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .start-logo{
