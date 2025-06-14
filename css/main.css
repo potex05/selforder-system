@@ -117,10 +117,10 @@ footer .copyright {
 
 .key {
   font-size: 1.5rem;
-  background: #219227;
+  background: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 8px;
-  color: green;
+  color: #219277;
   width: 100px;
   height: 40px;
   font-weight: 700;
