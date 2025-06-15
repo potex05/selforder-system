@@ -438,10 +438,7 @@ footer .copyright {
 }
 
 .history-header {
-  font-weight: bold;
   background-color: #dfdfdf;
-  padding: 5px;
-  border-radius: 6px;
   position: sticky;
   z-index: 999;
   top: 0; 
@@ -452,6 +449,7 @@ footer .copyright {
   align-items: center; 
   font-weight: bold; 
   padding: 8px 7px;
+  border-radius: 6px;
 }
 
 .history-view{
