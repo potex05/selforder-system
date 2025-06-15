@@ -1,0 +1,106 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 30px;
+}
+
+.main {
+  padding: 1rem;
+}
+
+.input-area {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+#barcodeInput {
+  flex: 1;
+  color: transparent;
+  border: none;
+  outline: none;
+}
+
+#loadOrder {
+  padding: 0.5rem 1rem;
+  display: none;
+}
+
+.scan-instruction {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.scan-image {
+  display: block;
+  margin: 1rem auto;
+  max-width: 300px;
+}
+
+#orderHeading {
+ text-align: center;
+}
+
+.order-details {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 8px 7px;
+}
+
+.menu-title {
+  flex: 1;
+}
+
+.quantity-title {
+  width: 80px;
+  text-align: center;
+}
+
+.price-title {
+  width: 80px;
+  text-align: right;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 4.8px 0  2px 10px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+  background-color: #fff;
+}
+
+.item-info {
+   flex: 1;
+}
+
+.entry-quantity {
+   width: 80px;
+   text-align: center;
+}
+
+.price-info {
+   width: 80px;
+   text-align: right;
+}
+
+.total {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 1rem;
+}
