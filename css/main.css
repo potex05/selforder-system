@@ -354,7 +354,6 @@ footer .copyright {
 .action-buttons {
   display: flex;
   gap: 25px;
-  margin-top: 8px;
 }
 
 .guest-selector {
