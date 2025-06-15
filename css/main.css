@@ -383,10 +383,6 @@ footer .copyright {
   font-weight: 700;
 }
 
-.confirmation {
-  text-align: center;
-}
-
 .custom-input input {
   width: 80px;
   /* padding: 0.5em; */
@@ -396,11 +392,15 @@ footer .copyright {
 
 .confirmation{
   position: fixed;
+  text-align: center;
   padding: 1.5rem;
   background: #fff;
   border: 1px solid green;
   box-shadow: 0 0 10px gray;
-  top: 300px;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .confirmation-buttons {
