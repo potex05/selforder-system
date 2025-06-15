@@ -66,7 +66,7 @@ function showPaymentScreen() {
         </div>
       </div>
 
-      <div style="text-align: center; margin-top: 5px;">
+      <div style="text-align: center;">
         <button id="finalizePaymentButton" class="finalize-payment-button">お会計する</button>
       </div>
     </div>
