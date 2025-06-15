@@ -227,8 +227,8 @@ footer .copyright {
 
 #addMoreBtn,
 #finalOrderBtn {
-  padding: 10px 30px;
-  font-size: 31px;
+  padding: 6px 30px;
+  font-size: 30px;
 }
 
 .next-button:hover {
@@ -353,7 +353,7 @@ footer .copyright {
 .action-buttons {
   display: flex;
   gap: 25px;
-  margin-top: 30px;
+  margin-top: 8px;
 }
 
 .guest-selector {
