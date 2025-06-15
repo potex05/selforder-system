@@ -414,7 +414,9 @@ footer .copyright {
 #confirmNo,
 #confirmYes,
 #confirmOrderNo,
-#confirmOrderYes {
+#confirmOrderYes,
+#confirmDeleteNo,
+#confirmDeleteYes {
   border: 1px solid gray;
   padding: 0 5px;
   border-radius: 2px;
