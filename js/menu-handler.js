@@ -42,7 +42,7 @@ function setupMenuInputHandler() {
                   <button id="increaseBtn"></button>
                 </div>
 
-                <div class="action-buttons">
+                <div class="action-buttons" id="quantityButtons">
                   <button id="backBtn">もどる</button>
                   <button id="addToCartBtn">注文かごへ追加する</button>
                 </div>
