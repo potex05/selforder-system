@@ -96,7 +96,7 @@ function showFinalScreen() {
         <div class="totalPrice-container">合計<span>${totalPrice}</span>円(税込)</div>
       </div>
       <div style="margin-top: 1rem;">
-        <button id="closeReceiptView" style="padding: 0.3rem 0.8rem;">閉じる</button>
+        <button id="closeReceiptView">閉じる</button>
       </div>
     `;
 
