@@ -441,6 +441,7 @@ footer .copyright {
   font-weight: bold;
   background-color: #dfdfdf;
   padding: 5px;
+  border-radius: 6px;
   position: sticky;
   z-index: 999;
   top: 0; 
