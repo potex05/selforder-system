@@ -410,8 +410,10 @@ footer .copyright {
   gap: 1.5em;
 }
 
-.confirmOrderNo,
-.confirmOrderYes {
+#confirmNo,
+#confirmYes,
+#confirmOrderNo,
+#confirmOrderYes {
   border: 1px solid gray;
   padding: 0 5px;
   border-radius: 2px;
