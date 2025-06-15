@@ -3,6 +3,7 @@
 function showPaymentScreen() {
   const header = document.querySelector(".header");
   const main = document.querySelector(".main");
+  main.style.height = `${window.innerHeight}px`;
   const footerButtons = document.querySelectorAll(".footer-btn");
 
   // ヘッダー変更
