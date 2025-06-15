@@ -83,10 +83,9 @@ function showHistoryScreen() {
     const wrapper = document.querySelector(".history-wrapper");
     const itemCount = wrapper?.querySelectorAll(".item-view").length || 0;
     if (itemCount >= 4) {
-      wrapper.style="padding-right: 0;"
       wrapper.style.maxHeight = "415px";
       wrapper.style.overflowY = "auto";
-      wrapper.style.marginBottom = "0.2rem";
+     /* wrapper.style.marginBottom = "0.2rem"; */
     }
   }, 0);
 }
