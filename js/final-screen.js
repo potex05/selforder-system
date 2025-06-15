@@ -17,7 +17,8 @@ function showFinalScreen() {
   // Code128バーコード生成
   const barcodeValue = Date.now().toString(); // タイムスタンプをバーコード値に
   localStorage.setItem(`order_${barcodeValue}`, JSON.stringify(orderHistory));
-
+  // 保険：ドメインルートにも保存しておく（GitHub Pages用）
+  localStorage.setItem(`/order_${barcodeValue}`, JSON.stringify(orderHistory));
 
   // テンプレートHTML（mainに置き換え）
   main.innerHTML = `
