@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>レジ画面</title>
+  <link rel="stylesheet" href="css/register.css" />
+</head>
+<body>
+  <header class="header">注文明細を確認する</header>
+  <main class="main">
+    <h2 class="scan-instruction">バーコードをスキャンしてください</h2>
+    <img src="image/barcode-guide.jpg" alt="バーコードスキャン例" class="scan-image" />
+  <div class="input-area">
+    <input type="number" id="barcodeInput" autofocus />
+    <button id="loadOrder">読み込み</button>
+  </div>
+  </main>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>
