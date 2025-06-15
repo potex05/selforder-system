@@ -76,11 +76,10 @@ function showPaymentScreen() {
   setTimeout(() => {
     const wrapper = document.querySelector(".history-wrapper");
     const itemCount = wrapper?.querySelectorAll(".item-view").length || 0;
-    if (itemCount >= 4) {
-      wrapper.style="padding-right: 0;"
-      wrapper.style.maxHeight = "415px";
+    if (itemCount >= 9) {
+      /* wrapper.style.maxHeight = "415px";
+      wrapper.style.marginBottom = "1rem"; */
       wrapper.style.overflowY = "auto";
-      wrapper.style.marginBottom = "1rem";
     }
   }, 0);
 
