@@ -425,6 +425,10 @@ footer .copyright {
   color: black;
 }
 
+#closeReceiptView {
+  padding: 0.3rem 0.8rem;
+}
+
 .item-wrapper,
 .history-wrapper {
   border: 1px solid green;
