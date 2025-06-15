@@ -88,6 +88,8 @@ setTimeout(() => {
   }
 }, 0);
 
+  // mainの高さをアドレスバー除去後の高さに固定（←追加）
+  main.style.height = `${window.innerHeight}px`;
 
   // 確定画面HTMLテンプレート
   main.innerHTML = `
