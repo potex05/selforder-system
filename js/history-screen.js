@@ -82,7 +82,7 @@ function showHistoryScreen() {
   setTimeout(() => {
     const wrapper = document.querySelector(".history-wrapper");
     const itemCount = wrapper?.querySelectorAll(".item-view").length || 0;
-    if (itemCount >= 4) {
+    if (itemCount >= 9) {
       wrapper.style.maxHeight = "415px";
       wrapper.style.overflowY = "auto";
      /* wrapper.style.marginBottom = "0.2rem"; */
