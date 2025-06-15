@@ -415,6 +415,7 @@ footer .copyright {
   width: 100%;
   height: 400px;
   background-color: #dfdfdf;
+  overflow-y: auto;
 }
 
 .thanks-message{
