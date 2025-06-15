@@ -13,6 +13,12 @@ body {
   background: white;
 }
 
+@supports (height: 100dvh) {
+  body {
+    height: 100dvh;
+  }
+}
+
 .start-screen {
   display: flex;
   flex-direction: column;
