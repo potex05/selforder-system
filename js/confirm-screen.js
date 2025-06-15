@@ -216,7 +216,7 @@ document.getElementById("finalOrderBtn").addEventListener("click", () => {
   confirmation.classList.add("confirmation");
 
   confirmation.innerHTML = `
-    <p>注文をキッチンへ送信しますか？</p>
+    <p>注文を送信しますか？</p>
     <div class="confirmation-buttons">
       <button id="confirmOrderNo">いいえ</button>
       <button id="confirmOrderYes">はい</button>
