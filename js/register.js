@@ -63,4 +63,3 @@ renderOrder(JSON.parse(orderData)); // 既存処理を関数化（後述）
 
 function renderOrder(order) {
 }
-}
