@@ -27,9 +27,9 @@ function loadOrderByBarcode() {
   const barcode = document.getElementById('barcodeInput').value.trim();
   if (!barcode) return;
 
-  let orderData = localStorage.getItem(`order_${barcode}`);
+  let orderData = localStorage.getItem(`order_${barcodeValue}`);
   if (!orderData) {
-    orderData = localStorage.getItem(`/order_${barcode}`); // fallback（パス差異対応）
+    orderData = localStorage.getItem(`/order_${barcodeValue}`); // fallback（パス差異対応）
   }
 
   let orderDetailsDiv = document.getElementById('orderDetails');
