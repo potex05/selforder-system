@@ -57,9 +57,9 @@ function loadOrderByBarcode() {
     });
     return; // 非同期処理なので return しておく
   }
-}
 
-renderOrder(JSON.parse(orderData)); // 既存処理を関数化（後述）
+  renderOrder(JSON.parse(orderData)); // 既存処理を関数化（後述）
+}
 
 function renderOrder(order) {
 }
