@@ -31,6 +31,17 @@ function loadOrderByBarcode() {
   if (!orderData) {
     orderData = localStorage.getItem(`/order_${barcode}`); // fallback（パス差異対応）
   }
+  if (!orderData) {
+  // 全localStorageを走査して該当キーを探す（保険中の保険）
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key && key.endsWith(barcode)) {
+      orderData = localStorage.getItem(key);
+      console.warn(`backup読み込み成功: ${key}`);
+      break;
+    }
+  }
+}
 
   let orderDetailsDiv = document.getElementById('orderDetails');
   if (!orderDetailsDiv) {
