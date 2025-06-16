@@ -21,6 +21,7 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+console.log("現在のlocalStorageの中身：", JSON.stringify(localStorage, null, 2));
 
 function loadOrderByBarcode() {
   const barcode = document.getElementById('barcodeInput').value.trim();
