@@ -25,7 +25,7 @@ console.log("現在のlocalStorageの中身：", JSON.stringify(localStorage, nu
 
 function loadOrderByBarcode() {
   const barcode = document.getElementById('barcodeInput').value.trim();
-  if (!barcode) return;
+  if (!barcodeValue) return;
 
   let orderData = localStorage.getItem(`order_${barcodeValue}`);
   if (!orderData) {
