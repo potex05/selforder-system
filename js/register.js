@@ -44,6 +44,7 @@ function loadOrderByBarcode() {
 }
   // Firebase fallback
   if (!orderData) {
+     console.log("[loadOrderByBarcode] 入力バーコード:", barcode);
     window.checkFirebaseOrderDebug?.(barcode); // デバッグログを追加（存在確認付き）
     
     db.collection("orders").doc(barcode).get().then((doc) => {
