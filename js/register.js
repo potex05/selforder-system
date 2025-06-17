@@ -50,7 +50,15 @@ function loadOrderByBarcode() {
         localStorage.setItem(`order_${barcode}`, JSON.stringify(firebaseOrder)); // localStorageにキャッシュ
         renderOrder(firebaseOrder); // 描画
       } else {
-        document.getElementById('orderDetails').innerHTML = `<p>注文データが見つかりませんでした。（Firebaseも空）</p>`;
+        let orderDetailsDiv = document.getElementById('orderDetails');
+        if (!orderDetailsDiv) {
+          orderDetailsDiv = document.createElement('div');
+          orderDetailsDiv.id = 'orderDetails';
+          orderDetailsDiv.className = 'order-details';
+          document.querySelector('main').appendChild(orderDetailsDiv);
+        }
+        orderDetailsDiv.innerHTML = `<p>注文データが見つかりませんでした。（Firebaseも空）</p>`;
+
       }
     }).catch((error) => {
       console.error("Firebase 読み込みエラー:", error);
