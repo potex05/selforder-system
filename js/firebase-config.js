@@ -11,7 +11,7 @@ const firebaseConfig = {
 };
 
 const app = firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore(app);
+const db = firebase.firestore();
 window.db = db;
 
 // デバッグ用関数（register.js から使う）
