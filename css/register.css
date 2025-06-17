@@ -16,7 +16,6 @@ body {
 }
 
 .input-area {
-  margin-bottom: 1.5rem;
   display: flex;
   gap: 0.5rem;
 }
@@ -26,6 +25,11 @@ body {
   color: transparent;
   border: none;
   outline: none;
+}
+
+.barcode-input::-webkit-inner-spin-button,
+.barcode-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
 
 #loadOrder {
