@@ -20,6 +20,15 @@ function showFinalScreen() {
   // 保険：ドメインルートにも保存しておく（GitHub Pages用）
   localStorage.setItem(`/order_${barcodeValue}`, JSON.stringify(orderHistory));
 
+  // 追加：Firebaseにも保存
+  db.collection("orders").doc(barcodeValue).set({
+    order: orderHistory
+  }).then(() => {
+    console.log(`Firebase に注文データを保存しました: order_${barcodeValue}`);
+  }).catch((error) => {
+    console.error("Firebase への保存に失敗しました:", error);
+  });
+
   // テンプレートHTML（mainに置き換え）
   main.innerHTML = `
     <div class="final-screen">
