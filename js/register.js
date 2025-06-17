@@ -73,4 +73,12 @@ function loadOrderByBarcode() {
 }
 
 function renderOrder(order) {
+  let orderDetailsDiv = document.getElementById('orderDetails');
+  if (!orderDetailsDiv) {
+    orderDetailsDiv = document.createElement('div');
+    orderDetailsDiv.id = 'orderDetails';
+    orderDetailsDiv.className = 'order-details';
+    document.querySelector('main').appendChild(orderDetailsDiv);
+  }
+  orderDetailsDiv.innerHTML = `<pre>${JSON.stringify(order, null, 2)}</pre>`;
 }
