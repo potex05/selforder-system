@@ -13,3 +13,12 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore(app);
 window.db = db;
+
+// デバッグ用関数（register.js から使う）
+window.checkFirebaseOrderDebug = function(barcode) {
+  db.collection("orders").doc(barcode).get().then((doc) => {
+    console.log("Firebase からの取得結果:", doc.exists, doc.data());
+  }).catch((error) => {
+    console.error("Firebase デバッグ取得エラー:", error);
+  });
+};
