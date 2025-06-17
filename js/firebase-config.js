@@ -16,6 +16,7 @@ window.db = db;
 
 // デバッグ用関数（register.js から使う）
 window.checkFirebaseOrderDebug = function(barcode) {
+  console.log("[checkFirebaseOrderDebug] チェック中のバーコード:", barcode);
   db.collection("orders").doc(barcode).get().then((doc) => {
     console.log("Firebase からの取得結果:", doc.exists, doc.data());
   }).catch((error) => {
