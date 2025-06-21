@@ -80,5 +80,60 @@ function renderOrder(order) {
     orderDetailsDiv.className = 'order-details';
     document.querySelector('main').appendChild(orderDetailsDiv);
   }
-  orderDetailsDiv.innerHTML = `<pre>${JSON.stringify(order, null, 2)}</pre>`;
+  orderDetailsDiv.innerHTML = ''; // 一旦クリア
+
+  // スキャン案内などを非表示に（そのまま残しても問題ないがUI整えるため）
+  const scanHeading = document.querySelector('.scan-instruction');
+  const scanImage = document.querySelector('.scan-image');
+  if (scanHeading) scanHeading.style.display = 'none';
+  if (scanImage) scanImage.style.display = 'none';
+
+  // 注文明細見出しがなければ追加
+  if (!document.getElementById('orderHeading')) {
+    const orderHeading = document.createElement('h2');
+    orderHeading.id = 'orderHeading';
+    orderHeading.textContent = '注文明細';
+    document.querySelector('main').insertBefore(orderHeading, orderDetailsDiv);
+  }
+
+  // 万一 null や undefined が渡ってきた場合
+  if (!order || !Array.isArray(order)) {
+    orderDetailsDiv.innerHTML = `<p>注文データが見つかりませんでした。</p>`;
+    return;
+  }
+
+  let html = `
+    <div class="item-header">
+      <div class="menu-title">メニュー名</div>
+      <div class="quantity-title">数量</div>
+      <div class="price-title">価格</div>
+    </div>
+  `;
+
+  let total = 0;
+
+  order.forEach(entry => {
+    const item = menuData[entry.code];
+    if (!item) return;
+    const price = item.price * entry.quantity;
+    total += price;
+    html += `
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name">${item.name}</div>
+        </div>
+        <div class="entry-quantity">${entry.quantity}</div>
+        <div class="price-info">${price}</div>
+      </div>
+    `;
+  });
+
+  html += `<div class="total">合計：${total}円（税込）</div>`;
+  orderDetailsDiv.innerHTML = html;
+
+  // ヘッダー変更（自然なレジらしさ）
+  const header = document.querySelector('header.header');
+  if (header) {
+    header.textContent = 'ご利用ありがとうございました。';
+  }
 }
