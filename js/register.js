@@ -83,17 +83,19 @@ function renderOrder(order) {
   orderDetailsDiv.innerHTML = ''; // 一旦クリア
 
   // スキャン案内などを非表示に（そのまま残しても問題ないがUI整えるため）
-  const scanHeading = document.querySelector('.scan-instruction');
+  const orderHeading = document.getElementById('orderHeading');
   const scanImage = document.querySelector('.scan-image');
-  if (scanHeading) scanHeading.style.display = 'none';
+  if (orderHeading) orderHeading.remove();
   if (scanImage) scanImage.style.display = 'none';
 
   // 注文明細見出しがなければ追加
-  if (!document.getElementById('orderHeading')) {
-    const orderHeading = document.createElement('h2');
-    orderHeading.id = 'orderHeading';
-    orderHeading.textContent = '注文明細';
-    document.querySelector('main').insertBefore(orderHeading, orderDetailsDiv);
+  const oldHeading = document.getElementById('orderHeading');
+  if (oldHeading) oldHeading.remove();
+
+  const newHeading = document.createElement('h2');
+  newHeading.id = 'orderHeading';
+  newHeading.textContent = '注文明細';
+  document.querySelector('main').insertBefore(newHeading, orderDetailsDiv);
   }
 
   // 万一 null や undefined が渡ってきた場合
