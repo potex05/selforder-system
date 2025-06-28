@@ -96,7 +96,6 @@ function renderOrder(order) {
   newHeading.id = 'orderHeading';
   newHeading.textContent = '注文明細';
   document.querySelector('main').insertBefore(newHeading, orderDetailsDiv);
-  }
 
   // 万一 null や undefined が渡ってきた場合
   if (!order || !Array.isArray(order)) {
@@ -111,7 +110,7 @@ function renderOrder(order) {
     document.querySelector('main').insertBefore(newHeading, orderDetailsDiv);
     return;
   }
-
+  
   let html = `
     <div class="item-header">
       <div class="menu-title">メニュー名</div>
