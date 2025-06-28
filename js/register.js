@@ -101,6 +101,14 @@ function renderOrder(order) {
   // 万一 null や undefined が渡ってきた場合
   if (!order || !Array.isArray(order)) {
     orderDetailsDiv.innerHTML = `<p>注文データが見つかりませんでした。</p>`;
+    // ヘッダーをエラー表示用に
+    const oldHeading = document.getElementById('orderHeading');
+    if (oldHeading) oldHeading.remove();
+
+    const newHeading = document.createElement('h2');
+    newHeading.id = 'orderHeading';
+    newHeading.textContent = '伝票番号が存在しません';
+    document.querySelector('main').insertBefore(newHeading, orderDetailsDiv);
     return;
   }
 
